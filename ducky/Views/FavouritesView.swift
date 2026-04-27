@@ -270,9 +270,11 @@ struct FavouritesView: View {
     private var emptyState: some View {
         VStack(spacing: 24) {
             // Birds at the top
-            BirdsView(skyWidth: UIScreen.main.bounds.width, skyHeight: 80)
-                .frame(height: 80)
-                .allowsHitTesting(false)
+            GeometryReader { proxy in
+                BirdsView(skyWidth: proxy.size.width, skyHeight: 80)
+                    .allowsHitTesting(false)
+            }
+            .frame(height: 80)
 
             ZStack {
                 // Outer glow circle

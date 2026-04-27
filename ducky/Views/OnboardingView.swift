@@ -159,13 +159,14 @@ struct OnboardingView: View {
 
                         DuckView(state: .begeistert, size: 120)
                             .offset(y: duckBob ? -4 : 4)
-                            .animation(
-                                .easeInOut(duration: 2.0).repeatForever(autoreverses: true),
-                                value: duckBob
-                            )
                     }
                     .frame(height: 185)
-                    .onAppear { duckBob = true }
+                    .onAppear {
+                        guard !duckBob else { return }
+                        withAnimation(.easeInOut(duration: 2.0).repeatForever(autoreverses: true)) {
+                            duckBob = true
+                        }
+                    }
 
                     VStack(spacing: 6) {
                         Text("Servus, ich bin Ducky!")
@@ -304,10 +305,6 @@ struct OnboardingView: View {
 
                         DuckView(state: locationDuckState, size: 120)
                             .offset(y: duckBob ? -4 : 4)
-                            .animation(
-                                .easeInOut(duration: 2.0).repeatForever(autoreverses: true),
-                                value: duckBob
-                            )
                     }
                     .frame(height: 185)
                     .animation(AppTheme.gentleSpring, value: locationService.isAuthorized)
@@ -405,10 +402,6 @@ struct OnboardingView: View {
 
                         DuckView(state: .begeistert, size: 120)
                             .offset(y: duckBob ? -4 : 4)
-                            .animation(
-                                .easeInOut(duration: 2.0).repeatForever(autoreverses: true),
-                                value: duckBob
-                            )
                     }
                     .frame(height: 185)
 
@@ -505,10 +498,6 @@ struct OnboardingView: View {
 
                         DuckView(state: .columbo, size: 120)
                             .offset(y: duckBob ? -4 : 4)
-                            .animation(
-                                .easeInOut(duration: 2.0).repeatForever(autoreverses: true),
-                                value: duckBob
-                            )
                     }
                     .frame(height: 185)
 
@@ -668,7 +657,7 @@ struct OnboardingView: View {
             Button {
                 completeOnboarding()
             } label: {
-                Text("Jetzt wirklich!")
+                Text("Oida, nicht jetzt!")
                     .font(.system(size: 18, weight: .bold, design: .rounded))
                     .foregroundStyle(.white)
                     .frame(maxWidth: .infinity)

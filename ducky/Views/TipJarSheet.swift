@@ -50,10 +50,6 @@ struct TipJarSheet: View {
 
                                 DuckView(state: .columbo, size: 120)
                                     .offset(y: duckBob ? -4 : 4)
-                                    .animation(
-                                        .easeInOut(duration: 2.0).repeatForever(autoreverses: true),
-                                        value: duckBob
-                                    )
                             }
                             .frame(height: 185)
 
@@ -105,7 +101,12 @@ struct TipJarSheet: View {
                 }
             }
             .navigationBarHidden(true)
-            .onAppear { duckBob = true }
+            .onAppear {
+                guard !duckBob else { return }
+                withAnimation(.easeInOut(duration: 2.0).repeatForever(autoreverses: true)) {
+                    duckBob = true
+                }
+            }
             .task {
                 tipJarService.configureIfNeeded()
                 await tipJarService.loadProductsIfNeeded()

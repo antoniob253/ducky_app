@@ -27,19 +27,19 @@ struct ContentView: View {
 
     @MainActor
     init(
-        dataService: DataService = .shared,
-        locationService: LocationService = .shared,
-        weatherService: WeatherService = .shared,
-        lakeContentService: LakeContentService = .shared,
-        lakePlaceService: LakePlaceService = .shared,
-        tipJarService: TipJarService = .shared
+        dataService: DataService? = nil,
+        locationService: LocationService? = nil,
+        weatherService: WeatherService? = nil,
+        lakeContentService: LakeContentService? = nil,
+        lakePlaceService: LakePlaceService? = nil,
+        tipJarService: TipJarService? = nil
     ) {
-        self.dataService = dataService
-        self.locationService = locationService
-        self.weatherService = weatherService
-        self.lakeContentService = lakeContentService
-        self.lakePlaceService = lakePlaceService
-        self.tipJarService = tipJarService
+        self.dataService = dataService ?? .shared
+        self.locationService = locationService ?? .shared
+        self.weatherService = weatherService ?? .shared
+        self.lakeContentService = lakeContentService ?? .shared
+        self.lakePlaceService = lakePlaceService ?? .shared
+        self.tipJarService = tipJarService ?? .shared
 
         let stored = UserDefaults.standard.object(forKey: "preferredStartTab") as? Int ?? 0
         _selectedTab = State(initialValue: AppTab(rawValue: Self.clampedTab(stored)) ?? .home)
