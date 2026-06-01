@@ -37,4 +37,4 @@ Not open-source. All rights reserved.
 
 ## Author
 
-**Antonio Baltic** — [@antoniobaltic](https://github.com/antoniobaltic)
+© 2026 Antonio Baltic
