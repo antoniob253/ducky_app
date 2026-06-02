@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Datenschutzerklärung – Ducky</title>
+<meta name="description" content="Datenschutzerklärung der App Ducky – Österreichs Badeseen.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ocean: #1A73E8;
+    --sky: #4DA6FF;
+    --light: #8FCCFF;
+    --sunshine: #FFCC00;
+    --ink: #1c2733;
+    --ink-soft: #54657a;
+    --card: #ffffff;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    color: var(--ink);
+    background: linear-gradient(180deg, #eaf4ff 0%, #f4f9ff 40%, #ffffff 100%);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  .hero {
+    background: linear-gradient(160deg, var(--sky) 0%, var(--ocean) 100%);
+    color: #fff;
+    padding: 56px 24px 64px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::after {
+    content: "";
+    position: absolute;
+    left: 0; right: 0; bottom: -1px;
+    height: 40px;
+    background: radial-gradient(120% 100% at 50% 0, transparent 0, transparent 60%, #eaf4ff 61%);
+  }
+  .duck { font-size: 56px; line-height: 1; margin-bottom: 12px; }
+  .hero h1 { font-size: 30px; font-weight: 800; letter-spacing: -0.5px; }
+  .hero p { font-size: 16px; font-weight: 600; opacity: 0.92; margin-top: 6px; }
+  main {
+    max-width: 720px;
+    margin: -28px auto 0;
+    padding: 0 18px 64px;
+    position: relative;
+    z-index: 2;
+  }
+  .card {
+    background: var(--card);
+    border-radius: 20px;
+    padding: 22px 24px;
+    margin-bottom: 16px;
+    box-shadow: 0 6px 24px rgba(26, 115, 232, 0.08);
+    border: 1px solid rgba(143, 204, 255, 0.25);
+  }
+  .card h2 {
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--ocean);
+    margin-bottom: 12px;
+    letter-spacing: -0.2px;
+  }
+  .card p { color: var(--ink-soft); font-size: 15.5px; margin-bottom: 10px; }
+  .card p:last-child { margin-bottom: 0; }
+  .card p strong { color: var(--ink); font-weight: 700; }
+  .intro { text-align: center; padding: 4px 6px 22px; }
+  .intro p { color: var(--ink-soft); font-size: 15px; }
+  a { color: var(--ocean); font-weight: 700; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  footer {
+    text-align: center;
+    padding: 8px 18px 40px;
+    color: var(--ink-soft);
+    font-size: 13.5px;
+  }
+  footer .stamp {
+    display: inline-block;
+    background: rgba(255, 204, 0, 0.18);
+    color: #8a6d00;
+    font-weight: 700;
+    padding: 5px 14px;
+    border-radius: 999px;
+    margin-bottom: 10px;
+  }
+</style>
+</head>
+<body>
+  <header class="hero">
+    <div class="duck">🦆</div>
+    <h1>Datenschutzerklärung</h1>
+    <p>Ducky – Österreichs Badeseen</p>
+  </header>
+
+  <main>
+    <div class="intro">
+      <p>Deine Privatsphäre ist uns wichtig. Ducky sammelt keine persönlichen Daten, trackt dich nicht und zeigt keine Werbung.</p>
+    </div>
+
+    <section class="card">
+      <h2>1. Verantwortlicher</h2>
+      <p>Antonio Baltic<br>Schörgelgasse 55<br>8010 Graz<br>Österreich</p>
+      <p>E-Mail: <a href="mailto:antoniobaltic@icloud.com">antoniobaltic@icloud.com</a></p>
+    </section>
+
+    <section class="card">
+      <h2>2. Welche Daten verarbeitet die App?</h2>
+      <p><strong>Standort (nur mit deiner Freigabe):</strong> Wird verwendet, um Gewässer in deiner Nähe zu sortieren und Entfernungen anzuzeigen. Der Standort wird nicht gespeichert oder übertragen.</p>
+      <p><strong>Netzwerk-Anfragen:</strong> Beim Abruf von Wetter-, Badegewässer-, Karten- und Wikipedia-Daten werden technische Anfragen an externe Dienste gestellt. Dabei wird deine IP-Adresse übermittelt.</p>
+      <p><strong>Lokaler Cache:</strong> Gewässer- und Wetterdaten werden auf deinem Gerät zwischengespeichert (Caches-Verzeichnis), damit die App schneller startet.</p>
+      <p><strong>Lokale Nutzerdaten:</strong> Favoriten, besuchte Seen und persönliche Notizen werden ausschließlich auf deinem Gerät gespeichert (SwiftData). Es erfolgt keine Übertragung an Server.</p>
+      <p><strong>In-App-Käufe:</strong> Trinkgeld-Käufe werden über Apple StoreKit und RevenueCat abgewickelt. RevenueCat verarbeitet anonyme Kaufdaten zur Umsatzanalyse. Der Entwickler erhält keine persönlichen Zahlungsdaten.</p>
+      <p>Kein Tracking, keine Werbung, keine Benutzerkonten, kein Profiling.</p>
+    </section>
+
+    <section class="card">
+      <h2>3. Rechtsgrundlagen (DSGVO)</h2>
+      <p><strong>Einwilligung (Art. 6 Abs. 1 lit. a):</strong> Standortzugriff – nur nach ausdrücklicher Freigabe in iOS.</p>
+      <p><strong>Vertragserfüllung (Art. 6 Abs. 1 lit. b):</strong> Abruf von Gewässer- und Wetterdaten zur Bereitstellung der Kernfunktionen.</p>
+      <p><strong>Berechtigtes Interesse (Art. 6 Abs. 1 lit. f):</strong> Lokale Zwischenspeicherung zur Verbesserung der Ladezeiten.</p>
+    </section>
+
+    <section class="card">
+      <h2>4. Empfänger und externe Dienste</h2>
+      <p><strong>AGES</strong> – Österreichische Agentur für Gesundheit und Ernährungssicherheit (Badegewässerqualität)</p>
+      <p><strong>Open-Meteo</strong> – Wetterdaten (Open-Source-API, Server in der EU)</p>
+      <p><strong>Wikipedia / Wikimedia</strong> – Beschreibungen zu Gewässern (deutschsprachige API)</p>
+      <p><strong>Apple Maps / MapKit</strong> – Kartenanzeige, Routen und Ortssuche</p>
+      <p><strong>Apple StoreKit</strong> – Abwicklung von In-App-Käufen</p>
+      <p><strong>RevenueCat</strong> – Verwaltung und Analyse von In-App-Käufen (Server in den USA, DSGVO-konform)</p>
+      <p>Hinweis: Bei diesen Anfragen kann deine IP-Adresse technisch bedingt vom jeweiligen Dienst verarbeitet werden. Es werden keine personenbezogenen Daten aktiv übermittelt.</p>
+    </section>
+
+    <section class="card">
+      <h2>5. Speicherdauer und Löschung</h2>
+      <p><strong>Gewässer-Cache:</strong> 24 Stunden, danach automatische Aktualisierung.</p>
+      <p><strong>Wetter-Cache:</strong> 30 Minuten, danach automatische Aktualisierung.</p>
+      <p><strong>Wikipedia-Cache:</strong> 30 Tage.</p>
+      <p><strong>Favoriten, Besuche und Notizen:</strong> Solange die App installiert ist.</p>
+      <p>Du kannst den Cache jederzeit in den Einstellungen löschen. Favoriten, Besuche und Notizen werden beim Deinstallieren der App gelöscht.</p>
+    </section>
+
+    <section class="card">
+      <h2>6. Deine Rechte</h2>
+      <p>Du hast das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung und Datenübertragbarkeit (Art. 15–20 DSGVO).</p>
+      <p>Du kannst den Standortzugriff jederzeit in den iOS-Einstellungen widerrufen.</p>
+      <p>Alle lokalen Daten kannst du durch Deinstallation der App vollständig löschen.</p>
+      <p>Anfragen richtest du an: <a href="mailto:antoniobaltic@icloud.com">antoniobaltic@icloud.com</a></p>
+      <p>Beschwerderecht: Österreichische Datenschutzbehörde (<a href="https://www.dsb.gv.at" target="_blank" rel="noopener">dsb.gv.at</a>)</p>
+    </section>
+
+    <section class="card">
+      <h2>7. Sonstiges</h2>
+      <p>Die App richtet sich nicht an Kinder unter 16 Jahren.</p>
+      <p>Es findet keine automatisierte Entscheidungsfindung oder Profiling statt.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="stamp">Stand: April 2026</div>
+    <div>🦆 Ducky – Österreichs Badeseen</div>
+  </footer>
+</body>
+</html>
